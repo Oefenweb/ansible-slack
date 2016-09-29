@@ -1,7 +1,5 @@
 # vars file for slack
 ---
-slack_dependencies:
-  - curl
 slack_downloads_path: /var/lib/ansible/slack/downloads
 slack_machine_map:
   i686: i386

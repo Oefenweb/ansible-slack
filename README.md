@@ -6,7 +6,7 @@ Set up (the latest version of) [Slack](https://slack.com/downloads/linux) in Deb
 
 #### Requirements
 
-* `curl` (will be installed)
+None
 
 #### Variables
 
