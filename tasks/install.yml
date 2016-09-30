@@ -1,0 +1,32 @@
+# tasks file for slack
+---
+- name: install | create (download) directory
+  file:
+    path: "{{ slack_downloads_path }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+  tags:
+    - slack-install-download
+    - slack-install-download-directory
+
+- name: install | download deb
+  get_url:
+    url: "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-{{ slack_machine_map[ansible_machine] }}.deb"
+    dest: "{{ slack_downloads_path }}/slack-desktop-{{ slack_version }}-{{ slack_machine_map[ansible_machine] }}.deb"
+    owner: root
+    group: root
+    mode: 0644
+  tags:
+    - slack-install-download
+    - slack-install-download-deb
+
+- name: install | install deb
+  apt:
+    update_cache: true
+    cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
+    deb: "{{ slack_downloads_path }}/slack-desktop-{{ slack_version }}-{{ slack_machine_map[ansible_machine] }}.deb"
+  tags:
+    - slack-install-install
+    - slack-install-install-deb
