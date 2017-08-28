@@ -5,17 +5,16 @@ galaxy_info:
   company: Oefenweb.nl B.V.
   description: Set up (the latest version of) Slack in Debian-like systems
   license: MIT
-  min_ansible_version: 1.9.6
+  min_ansible_version: 2.0.0.0
   platforms:
     - name: Ubuntu
       versions:
-        - precise
         - trusty
         - xenial
     - name: Debian
       versions:
-        - wheezy
         - jessie
+        - stretch
   galaxy_tags:
     - development
     - system
