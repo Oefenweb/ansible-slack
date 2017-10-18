@@ -10,7 +10,7 @@ None
 
 #### Variables
 
-* `slack_version` [default: `2.8.1`]: Version to install
+* `slack_version` [default: `2.8.2`]: Version to install
 
 ## Dependencies
 
