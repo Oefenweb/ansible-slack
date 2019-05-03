@@ -10,7 +10,7 @@ None
 
 #### Variables
 
-* `slack_version` [default: `3.3.8`]: Version to install
+* `slack_version` [default: `3.4.0`]: Version to install
 
 ## Dependencies
 
