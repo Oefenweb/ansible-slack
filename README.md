@@ -1,6 +1,6 @@
 ## slack
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-slack.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-slack)
+[![CI](https://github.com/Oefenweb/ansible-slack/workflows/CI/badge.svg)](https://github.com/Oefenweb/ansible-slack/actions?query=workflow%3ACI)
 [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-slack-blue.svg)](https://galaxy.ansible.com/Oefenweb/slack)
 
 Set up (the latest version of) [Slack](https://slack.com/downloads/linux) in Debian-like systems.
@@ -11,7 +11,7 @@ None
 
 #### Variables
 
-* `slack_version` [default: `4.11.3`]: Version to install
+* `slack_version` [default: `4.12.1`]: Version to install
 
 ## Dependencies
 
