@@ -1,4 +1,4 @@
-# vars file for slack
+# vars file
 ---
 slack_downloads_path: /var/lib/ansible/slack/downloads
 slack_machine_map:

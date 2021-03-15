@@ -1,6 +1,7 @@
-# meta file for slack
+# meta file
 ---
 galaxy_info:
+  namespace: oefenweb
   role_name: slack
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.
