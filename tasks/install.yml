@@ -13,8 +13,8 @@
 
 - name: install | download deb
   get_url:
-    url: "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_version }}-{{ slack_machine_map[ansible_machine] }}.deb"
-    dest: "{{ slack_downloads_path }}/slack-desktop-{{ slack_version }}-{{ slack_machine_map[ansible_machine] }}.deb"
+    url: "https://downloads.slack-edge.com/releases/linux/{{ slack_version }}/prod/x64/slack-desktop-{{ slack_version }}-amd64.deb"
+    dest: "{{ slack_downloads_path }}/slack-desktop-{{ slack_version }}-amd64.deb"
     owner: root
     group: root
     mode: 0644
@@ -26,7 +26,7 @@
   apt:
     update_cache: true
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
-    deb: "{{ slack_downloads_path }}/slack-desktop-{{ slack_version }}-{{ slack_machine_map[ansible_machine] }}.deb"
+    deb: "{{ slack_downloads_path }}/slack-desktop-{{ slack_version }}-amd64.deb"
   tags:
     - slack-install-install
     - slack-install-install-deb
