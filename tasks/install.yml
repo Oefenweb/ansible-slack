@@ -1,7 +1,7 @@
 # tasks file
 ---
 - name: install | create (download) directory
-  file:
+  ansible.builtin.file:
     path: "{{ slack_downloads_path }}"
     state: directory
     owner: root
@@ -12,7 +12,7 @@
     - slack-install-download-directory
 
 - name: install | download deb
-  get_url:
+  ansible.builtin.get_url:
     url: "https://downloads.slack-edge.com/releases/linux/{{ slack_version }}/prod/x64/slack-desktop-{{ slack_version }}-amd64.deb"
     dest: "{{ slack_downloads_path }}/slack-desktop-{{ slack_version }}-amd64.deb"
     owner: root
@@ -23,7 +23,7 @@
     - slack-install-download-deb
 
 - name: install | install deb
-  apt:
+  ansible.builtin.apt:
     update_cache: true
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
     deb: "{{ slack_downloads_path }}/slack-desktop-{{ slack_version }}-amd64.deb"
