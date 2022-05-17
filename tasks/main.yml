@@ -1,6 +1,6 @@
 # tasks file
 ---
-- include: install.yml
+- ansible.builtin.include: install.yml
   tags:
    - configuration
    - slack
