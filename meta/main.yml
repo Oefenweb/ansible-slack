@@ -23,3 +23,5 @@ galaxy_info:
     - development
     - system
 dependencies: []
+collections:
+  - ansible.builtin
