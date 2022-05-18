@@ -6,7 +6,7 @@ ENV LC_ALL C.UTF-8
 
 # python
 RUN apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -y python3-minimal python3-dev  curl && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -y python3-minimal python3-dev curl && \
   apt-get clean
 RUN curl -sL https://bootstrap.pypa.io/pip/3.6/get-pip.py | python3 -
 RUN rm -rf $HOME/.cache
