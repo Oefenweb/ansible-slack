@@ -1,9 +1,8 @@
 # meta file
 ---
 galaxy_info:
-  namespace: oefenweb
+  author: oefenweb
   role_name: slack
-  author: Mischa ter Smitten
   company: Oefenweb.nl B.V.
   description: Set up (the latest version of) Slack in Debian-like systems
   license: MIT
