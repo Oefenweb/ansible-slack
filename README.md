@@ -23,7 +23,7 @@ None
 ---
 - hosts: all
   roles:
-    - slack
+    - oefenweb.slack
 ```
 
 #### License
