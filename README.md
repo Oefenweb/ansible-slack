@@ -11,7 +11,7 @@ None
 
 #### Variables
 
-* `slack_version` [default: `4.34.120`]: Version to install
+* `slack_version` [default: `4.35.121`]: Version to install
 
 ## Dependencies
 
