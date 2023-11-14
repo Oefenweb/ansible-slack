@@ -65,7 +65,11 @@ jobs:
           python-version: '3.x'
 
       - name: Install test dependencies
-        run: pip install 'ansible${{ matrix.ansible-version }}' molecule-plugins[docker] docker
+        run: |
+          pip install 'ansible${{ matrix.ansible-version }}' molecule-plugins[docker] docker
+          if [ 'ansible${{ matrix.ansible-version }}' == '>=4.10.0, <5' ]; then
+            pip install six
+          fi
 
       - name: Run Molecule tests
         run: |
