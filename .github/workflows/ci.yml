@@ -47,10 +47,9 @@ jobs:
           - distro: debian10
           - distro: debian11
           - distro: debian12
-          - distro: ubuntu1604
-            ansible-version: '>=2.10, <2.11'
-          - distro: ubuntu1604
           - distro: ubuntu1804
+          - distro: ubuntu1804
+            ansible-version: '>=4.10.0, <5'
           - distro: ubuntu2004
           - distro: ubuntu2204
 
