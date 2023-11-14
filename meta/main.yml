@@ -18,7 +18,7 @@ galaxy_info:
         - buster
         - bullseye
         - bookworm
-galaxy_tags:
+  galaxy_tags:
     - development
     - system
 dependencies: []
