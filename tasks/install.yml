@@ -13,7 +13,7 @@
 
 - name: install | download deb
   ansible.builtin.get_url:
-    url: "https://downloads.slack-edge.com/releases/linux/{{ slack_version }}/prod/x64/slack-desktop-{{ slack_version }}-amd64.deb"
+    url: "https://downloads.slack-edge.com/desktop-releases/linux/x64/{{ slack_version }}/slack-desktop-{{ slack_version }}-amd64.deb"
     dest: "{{ slack_downloads_path }}/slack-desktop-{{ slack_version }}-amd64.deb"
     owner: root
     group: root
