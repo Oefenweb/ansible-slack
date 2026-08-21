@@ -49,6 +49,7 @@ jobs:
           - distro: ubuntu1804
             ansible-version: '>=9, <10'
           - distro: ubuntu2004
+            ansible-version: '>=12, <13'
           - distro: ubuntu2204
           - distro: ubuntu2404
 
@@ -66,6 +67,7 @@ jobs:
       - name: Install test dependencies
         run: |
           pip install 'ansible${{ matrix.ansible-version }}' molecule-plugins[docker] docker
+
       - name: Run Molecule tests
         run: |
           molecule test
